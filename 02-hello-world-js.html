@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Primeira página JS</title>
+    <meta charset="UTF-8">
+    <script>
+        function preencherParagrafo(){
+            var paragrafo = document.getElementById('paragrafo');
+            paragrafo.textContent = "O botão foi clicado ";
+        }
+    </script>
+</head>
+
+<body>
+    <h1>
+        Clique no botão abaixo:
+    </h1>
+    <button onClick="preencherParagrafo();">Alterar Parágrafo</button>
+    <p id="paragrafo"></p>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Primeira página JS</title>
+    <meta charset="UTF-8">
+    <script>
+        var clicks = 0;
+        function preencherParagrafo(){
+            clicks = clicks + 1;
+            document.getElementById('paragrafo').textContent = "O botão foi clicado " + clicks + " vezes.";
+        }
+    </script>
+</head>
+
+<body>
+    <h1>
+        Clique no botão abaixo:
+    </h1>
+    <button onClick="preencherParagrafo();">Contador de Clicks</button>
+    <p id="paragrafo"></p>
+</body>
+
+</html>

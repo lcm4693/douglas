@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Primeira página JS</title>
+    <meta charset="UTF-8">
+    <script>
+        function calcularResultado(){
+            var operacao = document.getElementById('operacao');
+            var resultado;
+
+            var numero1 = Number(document.getElementById('numero1').value);
+            var numero2 = Number(document.getElementById('numero2').value);
+
+            if(!numero1 || !numero2){
+                document.getElementById('resultadoOperacao').textContent = 'Um dos números não foram preenchidos ou são inválidos.'
+            }else{
+                if("+" === operacao.value){
+                    resultado = numero1 + numero2;
+                }else if("-" === operacao.value){
+                    resultado = numero1 - numero2;
+                }else if("*" === operacao.value){
+                    resultado = numero1 * numero2;
+                }else if("/" === operacao.value){
+                    resultado = numero1 / numero2;
+                }
+                document.getElementById('resultadoOperacao').textContent = resultado;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>
+        Use a calculadora abaixo:
+    </h1>
+    <input id="numero1" type="text" />
+    <select id="operacao">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+    </select>
+    <input id="numero2" type="text" />
+    <button onclick="calcularResultado();">Calcular resultado</button>
+    <p id="resultadoOperacao"></p>
+</body>
+
+</html>
